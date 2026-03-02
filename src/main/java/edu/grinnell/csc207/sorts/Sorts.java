@@ -26,7 +26,15 @@ public class Sorts {
      * @param arr the array to sort
      */
     public static <T extends Comparable<? super T>> void bubbleSort(T[] arr) {
-        // TODO: fill me in!
+        for( int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr.length-i-1; j++)
+            {
+                if(arr[j].compareTo(arr[j+1]) > 0)
+                    {
+                        swap(arr, j, j+1);
+                    }  
+            }
+        }
     }
 
     /**
@@ -38,7 +46,16 @@ public class Sorts {
      * @param arr the array to sort
      */
     public static <T extends Comparable<? super T>> void selectionSort(T[] arr) {
-        // TODO: fill me in!
+        for(int i = 0; i < arr.length; i++){
+            int minIndex = i;
+            for(int j = 0; j < arr.length; j++)
+            {
+                if (arr[j].compareTo(arr[minIndex]) < 0){
+                    minIndex = j;
+                }
+            }
+            swap (arr,i, minIndex);
+        }
     }
 
     /**
