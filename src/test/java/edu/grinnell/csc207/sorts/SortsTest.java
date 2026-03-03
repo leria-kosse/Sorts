@@ -55,9 +55,11 @@ public class SortsTest {
     public void testMergeSort() {
         testSort(Sorts::mergeSort);
     }
-    
-    @Test
+
+     @Test
     public void testQuickSort() {
         testSort(Sorts::quickSort);
     }
+    
+    
 }
