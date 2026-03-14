@@ -195,9 +195,9 @@ public class Sorts {
 
     public static <T extends Comparable<? super T>> int partition(T[] arr, int low, int high) {
         T pivot = arr[high];
-        int i = low;
+        int i = low - 1;
         
-        for( int j = low; i < high; j++) {
+        for( int j = low; j < high; j++) {
             
             if (arr[j].compareTo(pivot) < 0) {
                 i++;
